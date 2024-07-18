@@ -10,10 +10,28 @@ import Category from "@/lib/models/category";
  * @swagger
  * /api/blogs:
  *   get:
- *     description: Returns all the blogs
+ *     tags:
+ *       - Blogs
+ *     summary: Gets all blogs
+ *     description: Gets an blogs of a user
+ *     parameters:
+ *       - in: query
+ *         name: userId
+ *         required: true
+ *         description: ID of the user 
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: categoryId
+ *         required: true
+ *         description: ID of the category
+ *         schema:
+ *           type: string
  *     responses:
  *       200:
- *         description: Displays all the blogs
+ *         description: Blogs successfully found
+ *       404:
+ *         description: Blogs not found
  */
 export const GET = async (request: Request) => {
     try {

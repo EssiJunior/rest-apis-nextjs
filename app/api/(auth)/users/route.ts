@@ -9,6 +9,8 @@ const ObjectId = require("mongoose").Types.ObjectId;
  * @swagger
  * /api/users:
  *   get:
+ *     tags:
+ *       - Users
  *     description: Returns all the users
  *     responses:
  *       200:

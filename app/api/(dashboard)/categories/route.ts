@@ -9,10 +9,22 @@ import { Types } from "mongoose";
  * @swagger
  * /api/categories:
  *   get:
- *     description: Returns all the categories
+ *     tags:
+ *       - Categories
+ *     summary: Gets all categories
+ *     description: Gets an categories of a user
+ *     parameters:
+ *       - in: query
+ *         name: userId
+ *         required: true
+ *         description: ID of the user to get categories for
+ *         schema:
+ *           type: string
  *     responses:
  *       200:
- *         description: Displays all the categories
+ *         description: Categories successfully found
+ *       404:
+ *         description: Categories not found
  */
 export const GET = async (request: Request) => {
     try {
