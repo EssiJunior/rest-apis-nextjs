@@ -4,6 +4,16 @@ import Category from "@/lib/models/category";
 import { NextResponse } from "next/server";
 import { Types } from "mongoose";
 
+
+/**
+ * @swagger
+ * /api/categories:
+ *   get:
+ *     description: Returns all the categories
+ *     responses:
+ *       200:
+ *         description: Displays all the categories
+ */
 export const GET = async (request: Request) => {
     try {
         const { searchParams } = new URL(request.url);

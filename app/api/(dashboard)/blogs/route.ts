@@ -5,6 +5,16 @@ import { Types } from "mongoose";
 import User from "@/lib/models/user";
 import Category from "@/lib/models/category";
 
+
+/**
+ * @swagger
+ * /api/blogs:
+ *   get:
+ *     description: Returns all the blogs
+ *     responses:
+ *       200:
+ *         description: Displays all the blogs
+ */
 export const GET = async (request: Request) => {
     try {
         const { searchParams } = new URL(request.url);

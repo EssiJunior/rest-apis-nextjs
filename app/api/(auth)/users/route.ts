@@ -5,6 +5,15 @@ import { Types } from "mongoose";
 
 const ObjectId = require("mongoose").Types.ObjectId;
 
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     description: Returns all the users
+ *     responses:
+ *       200:
+ *         description: Displays all the users
+ */
 export const GET = async () => {
     try {
         await connect();
